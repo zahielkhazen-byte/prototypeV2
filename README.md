@@ -1,13 +1,11 @@
-# RunE Talkie V2
+# RunE Talkie · Run Beirut. Run together.
+Open the private moderator link, put on an earpiece, enter a name and tap **Join with audio**. Show the Runners QR to four or more people. Each scans with their phone camera, enters a name and allows the microphone. Keep the page in the foreground during the field test.
+ 
+Tap once to record, then tap again to send. Other turns wait while you record. At 16 kHz mono the 48 MiB upload ceiling allows about 26 minutes per turn. Keep the page open during upload. A failed upload can be retried. Audio and member records on the hosted service persist in the race storage. Use simulated emergency reports for the class exercise.
 
-## Two-phone field test with GitHub Codespaces
+Runners can all speak. Participants choose Play in the Music channel's Spotify player, whose playback availability depends on Spotify. The moderator sets the playlist and approves Business & Race Announcements speakers. Emergency recordings are available only to the moderator, who can receive them from other channels. Each participant gets a Friends & Family channel and can create private channels. Show a private channel's QR to invite someone. The moderator can enter every channel. The main race QR never grants moderator access.
 
-1. Extract the ZIP. Upload index.html and server.py together to the root of a GitHub repository and commit them.
-2. In the repository choose **Code → Codespaces → Create codespace**. In its terminal run `python server.py`.
-3. Open **Ports**. Forward port **8000** if needed. Right-click the port and set **Port Visibility → Public**. Copy its forwarded HTTPS address. Keep the codespace running during the test.
-4. Open the address in Safari or Chrome on both phones. Connect an earpiece to each phone, enable audio and choose **Runners**. Hold the button for a sentence and release. The other phone plays the message. Repeat in the opposite direction.
-5. Create a channel on one phone and select it on the other. **Invite by email** opens your mail app with the channel link. The **Music** channel also has a locally generated running beat each listener can toggle.
+## Run in GitHub Codespaces
+Use Node.js 20 or newer. Run `python server.py` or `npm start` at the repository root. Make forwarded port 8000 public and open the moderator URL printed in the terminal. Keep it private. The local server keeps race data in memory until restart. A moderator URL identifies one race. Keep it to reopen the same race. On a desktop, localhost works for development. Physical phones require HTTPS.
 
-Anyone with the public address can join and listen. Channels and short audio turns are held in server memory. Restart the server to reset the session. Stop the codespace after testing.
-
-For a desktop trial, run the same command in the extracted folder and open http://localhost:8000 in two browser tabs. Use headphones. Phones need the forwarded HTTPS address for microphone access. Internet audio is delivered after release. Keep both screens awake and the browser in the foreground.
+Brand asset from the Beirut Marathon Association website. Independent ENMG 664 course prototype. The bundled QR encoder is QRCode for JavaScript by Kazuhiko Arase (MIT).
